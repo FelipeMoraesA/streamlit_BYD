@@ -1,0 +1,69 @@
+[
+	{
+		"car": "byd seal",
+		"prop": "100% eletric",
+		"acceleration_0_100": 3.8,
+		"autonomy_km": 372,
+		"colors": 6,
+		"price": 296800,
+		"line": "ocean",
+		"url_img": "https://static.wixstatic.com/media/0618bc_e7bbf226c0534861a8fec6a0ce84dc92~mv2.jpg/v1/fill/w_980,h_584,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/0618bc_e7bbf226c0534861a8fec6a0ce84dc92~mv2.jpg",
+		"pdf": "https://www.bydcars.com.br/_files/ugd/0618bc_887a236718ef43f19905c399c2e8c81d.pdf"
+	},
+	{
+		"car": "byd dolphin",
+		"prop": "100% eletric",
+		"acceleration_0_100": 10.9,
+		"autonomy_km": 291,
+		"colors": 4,
+		"price": 149800,
+		"line": "ocean",
+		"url_img": "https://static.wixstatic.com/media/0618bc_8fe9a7c86df1461c89973e610da40c41~mv2.jpg/v1/fill/w_980,h_584,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/0618bc_8fe9a7c86df1461c89973e610da40c41~mv2.jpg",
+		"pdf": "https://www.bydcars.com.br/_files/ugd/0618bc_c827b050ac7643aba91786314287e98b.pdf"
+	},
+	{
+		"car": "byd yuan plus",
+		"prop": "100% eletric",
+		"acceleration_0_100": 7.3,
+		"autonomy_km": 294,
+		"colors": 5,
+		"price": 229800,
+		"line": "yuan",
+		"url_img": "https://static.wixstatic.com/media/0618bc_b976ea0445654fdb9bc1e5dfaeb55cb6~mv2.webp",
+		"pdf": "https://www.bydcars.com.br/_files/ugd/0618bc_208bdccdabee40478be234e0ec56f464.pdf"
+	},
+	{
+		"car": "byd song plus",
+		"prop": "hybrid",
+		"acceleration_0_100": 8.5,
+		"autonomy_km": 1074,
+		"colors": 5,
+		"price": 229800,
+		"line": "song",
+		"url_img": "https://static.wixstatic.com/media/0618bc_f9a004837f354c799eecddc856393eb4~mv2.jpg/v1/fill/w_980,h_623,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/0618bc_f9a004837f354c799eecddc856393eb4~mv2.jpg",
+		"pdf": "https://www.bydcars.com.br/_files/ugd/0618bc_e65d38d3fa3542b28fb0127a8bb0c29d.pdf"
+	},
+	{
+		"car": "byd tan",
+		"prop": "100% eletric",
+		"acceleration_0_100": 4.6,
+		"autonomy_km": 309,
+		"colors": 4,
+		"price": 529980,
+		"line": "tan",
+		"url_img": "https://static.wixstatic.com/media/0618bc_280e483f486d4e459e5bf6f1ef8f19f5~mv2.webp",
+		"pdf": "https://www.bydcars.com.br/_files/ugd/0618bc_ee817da8ec0343cf81398231a4acb01f.pdf"
+	},
+	{
+		"car": "byd han",
+		"prop": "100% eletric",
+		"acceleration_0_100": 3.9,
+		"autonomy_km": 349,
+		"colors": 1,
+		"price": 539990,
+		"line": "han",
+		"url_img": "https://static.wixstatic.com/media/0618bc_9f021cb0b4044b18a6c86684dfaf1751~mv2.jpg/v1/fill/w_980,h_630,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/0618bc_9f021cb0b4044b18a6c86684dfaf1751~mv2.jpg",
+		"pdf": "https://www.bydcars.com.br/_files/ugd/0618bc_d311ab78d892474893539a7faa1ad3db.pdf"
+	}
+]
+
