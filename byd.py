@@ -46,6 +46,7 @@ with c1:
         if i['car'] == model.lower():
             st.write(f'Modelo da linha "**{i["line"]}**", sua propulsão e **{i["prop"]}**;')
             st.write(f'Faz de 0 a 100 km/h em **{i["acceleration_0_100"]}** segundos;')
+            st.write(f'''Autonomia de {str(i['autonomy_km'])}km;''')
             st.write(f'Possui **{i["colors"]}** cores disponíveis;')
             price = i['price']
             price = '{:,.2f}'.format(price).replace(',','*').replace('.', ',').replace('*', '.')
@@ -65,7 +66,7 @@ with c2:
         st.image(
             url_img, 
             caption = 'Imagem meramente ilustrativa',
-            width = 800
+            width = 1200
         )
     with tab2:
         st.markdown(
