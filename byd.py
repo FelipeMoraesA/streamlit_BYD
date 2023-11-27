@@ -4,6 +4,12 @@ import json
 import urllib
 import base64
 
+st.set_page_config(
+    page_title = 'Descubra a BYD',
+    page_icon = 'https://www.byd.com.br/wp-content/uploads/2020/08/cropped-logo-BYD-new-2022-small-90x57.png',
+    layout = 'wide'
+)
+
 def embed(link: str, h: str) -> str:
     return f'''
     <iframe 
@@ -30,12 +36,6 @@ section.main > div:has(~ footer ) {
 </style>
 '''
 st.markdown(css, unsafe_allow_html=True)
-
-st.set_page_config(
-    page_title = 'Descubra a BYD',
-    page_icon = 'https://www.byd.com.br/wp-content/uploads/2020/08/cropped-logo-BYD-new-2022-small-90x57.png',
-    layout = 'wide'
-)
 
 st.title('Do you love BYD?')
 st.write('Conheca as características de cada veículo')
