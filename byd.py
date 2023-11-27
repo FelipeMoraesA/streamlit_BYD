@@ -1,6 +1,26 @@
 
 import streamlit as st
 import json
+import urllib
+import base64
+
+def embed(link: str, h: str) -> str:
+    return f'''
+    <iframe 
+        width="100%" height="{h}" src="https://www.youtube-nocookie.com/embed/{link}}" 
+        frameborder="0" allow="autoplay; 
+        clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen>
+    </iframe>
+    '''
+
+#function to display the PDF of a given file 
+def displayPDF(file):
+    # Opening file from file path. this is used to open the file from a website rather than local
+    with urllib.request.urlopen(file) as f:
+        base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+
+    # Embedding PDF in HTML
+    return f'''<iframe src="data:application/pdf;base64,{base64_pdf}" width="100%" height="600" type="application/pdf"></iframe>'''
 
 st.set_page_config(
     page_title = 'Descubra a BYD',
@@ -32,10 +52,11 @@ with c1:
             st.write(f'Preço: **R$ {price}**.')
             url_img = i['url_img']
             url_pdf = i['pdf']
+            url_video = i['video']
     
     # st.write(f'Veja a ficha completa em [pdf]({url_pdf}).')
 
-    st.link_button('Veja a ficha completa', url_pdf)
+    #st.link_button('Veja a ficha completa', url_pdf)
     
 with c2:
     tab1, tab2, tab3 = st.tabs(['Imagem', 'Vídeo', 'Ficha Técnica'])
@@ -46,7 +67,22 @@ with c2:
             caption = 'Imagem meramente ilustrativa',
             width = 800
         )
-    
+    with tab2:
+        st.markdown(
+            embed(url_video, "600"), unsafe_allow_html = True
+        )
+
+    with tab3:
+        st.markdown(
+            displayPDF(url_pdf)
+        )
 
 st.write('---')
-st.markdown(f''''<center>{'{:-^100}'.format('Saiba os benefícios da spirulina clicando [AQUI](https://www.scielo.br/j/rbme/a/Z8PKY9Vrmf98Lhj8PhmMdcS/?lang=pt)')}</center>''', unsafe_allow_html = True)
+st.markdown(f'''
+    <center>
+        <a href="https://www.scielo.br/j/rbme/a/Z8PKY9Vrmf98Lhj8PhmMdcS/?lang=pt">
+            Saiba os benefícios da spirulina
+        </a>
+    </center>''',
+    unsafe_allow_html = True
+)
