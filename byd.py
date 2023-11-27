@@ -33,7 +33,9 @@ with c1:
             url_img = i['url_img']
             url_pdf = i['pdf']
     
-    st.write(f'Veja a ficha completa em [pdf]({url_pdf}).')
+    # st.write(f'Veja a ficha completa em [pdf]({url_pdf}).')
+
+    st.link_button('Veja a ficha completa', url_pdf)
     
 with c2:
     st.image(
