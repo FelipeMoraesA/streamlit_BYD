@@ -86,10 +86,10 @@ with c2:
             embed(url_video, "600"), unsafe_allow_html = True
         )
 
-    with tab3:
-        st.markdown(
-            displayPDF(url_pdf), unsafe_allow_html = True
-        )
+    # with tab3:
+    #     st.markdown(
+    #         displayPDF(url_pdf), unsafe_allow_html = True
+    #     )
 
 st.write('---')
 st.markdown(f'''
