@@ -22,6 +22,15 @@ def displayPDF(file):
     # Embedding PDF in HTML
     return f'''<iframe src="data:application/pdf;base64,{base64_pdf}" width="100%" height="600" type="application/pdf"></iframe>'''
 
+css = '''
+<style>
+section.main > div:has(~ footer ) {
+    padding-bottom: 0px;
+}
+</style>
+'''
+st.markdown(css, unsafe_allow_html=True)
+
 st.set_page_config(
     page_title = 'Descubra a BYD',
     page_icon = 'https://www.byd.com.br/wp-content/uploads/2020/08/cropped-logo-BYD-new-2022-small-90x57.png',
