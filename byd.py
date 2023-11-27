@@ -27,10 +27,12 @@ def displayPDF(file):
 
     # Embedding PDF in HTML
     return f'''
-    <iframe 
-        src="data:application/pdf;base64,{base64_pdf}"
-        width="100%" height="600" type="application/pdf">
-    </iframe>
+    <object type="application/pdf">
+        <iframe 
+            src="data:application/pdf;base64,{base64_pdf}"
+            width="100%" height="600">
+        </iframe>
+    </object>
     '''
 
 css = '''
