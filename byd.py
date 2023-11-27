@@ -23,10 +23,14 @@ def embed(link: str, h: str) -> str:
 def displayPDF(file):
     # Opening file from file path. this is used to open the file from a website rather than local
     with urllib.request.urlopen(file) as f:
-        base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+        base64_pdf = base64.b64encode(f.read()) # 
 
     # Embedding PDF in HTML
-    return f'''<embed src="data:application/pdf;base64,{base64_pdf}" width="100%" height="600" type="application/pdf">'''
+    return f'''
+    <embed
+        src="data:application/pdf;base64,{base64_pdf.decode('utf-8')}"
+        width="100%" height="600", type="application/pdf">
+    '''
 
 css = '''
 <style>
@@ -73,19 +77,19 @@ with c2:
 
     with tab1:
         st.image(
-            url_img, 
+            url_img, use_column_width = 'always',
             caption = 'Imagem meramente ilustrativa',
-            width = 1200
+            width = 900
         )
     with tab2:
         st.markdown(
             embed(url_video, "600"), unsafe_allow_html = True
         )
 
-    with tab3:
-        st.markdown(
-            displayPDF(url_pdf)
-        )
+    # with tab3:
+    #     st.markdown(
+    #         displayPDF(url_pdf), unsafe_allow_html = True
+    #     )
 
 st.write('---')
 st.markdown(f'''
