@@ -38,11 +38,15 @@ with c1:
     st.link_button('Veja a ficha completa', url_pdf)
     
 with c2:
-    st.image(
-        url_img, 
-        caption = 'Imagem meramente ilustrativa',
-        width = 800
-    )
+    tab1, tab2, tab3 = st.tabs(['Imagem', 'Vídeo', 'Ficha Técnica'])
+
+    with tab1:
+        st.image(
+            url_img, 
+            caption = 'Imagem meramente ilustrativa',
+            width = 800
+        )
+    
 
 st.write('---')
 st.markdown(f''''<center>{'{:-^100}'.format('Saiba os benefícios da spirulina clicando [AQUI](https://www.scielo.br/j/rbme/a/Z8PKY9Vrmf98Lhj8PhmMdcS/?lang=pt)')}</center>''', unsafe_allow_html = True)
