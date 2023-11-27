@@ -89,7 +89,7 @@ with c2:
 
     with tab3:
         st.markdown(
-            displayPDF(url_pdf)
+            displayPDF(url_pdf), unsafe_allow_html = True
         )
 
 st.write('---')
