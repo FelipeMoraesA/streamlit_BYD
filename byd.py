@@ -77,9 +77,9 @@ with c2:
 
     with tab1:
         st.image(
-            url_img, 
+            url_img, use_column_width = 'always',
             caption = 'Imagem meramente ilustrativa',
-            width = 1000
+            width = 900
         )
     with tab2:
         st.markdown(
