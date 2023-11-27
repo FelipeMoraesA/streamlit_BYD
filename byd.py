@@ -28,7 +28,7 @@ def displayPDF(file):
     # Embedding PDF in HTML
     return f'''
     <iframe 
-        src="data:application/pdf;base64,{base64_pdf.decode('ascii')}"
+        src="data:application/pdf;base64,{base64_pdf.decode()}"
         width="100%" height="600", type="application/pdf">
     </iframe>
     '''
