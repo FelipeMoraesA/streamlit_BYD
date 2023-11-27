@@ -9,9 +9,9 @@ st.set_page_config(
 )
 
 st.title('Do you love BYD?')
-st.write('Conheca as caracteristicas de cada veiculo')
+st.write('Conheca as características de cada veículo')
 
-c1, c2 = st.columns([1, 1])
+c1, c2 = st.columns([1, 2])
 
 with c1:
     model = st.selectbox(
@@ -24,12 +24,12 @@ with c1:
 
     for i in dados:
         if i['car'] == model.lower():
-            st.write(f'Modelo da linha "**{i["line"]}**", sua propulsao e **{i["prop"]}**;')
+            st.write(f'Modelo da linha "**{i["line"]}**", sua propulsão e **{i["prop"]}**;')
             st.write(f'Faz de 0 a 100 km/h em **{i["acceleration_0_100"]}** segundos;')
-            st.write(f'Possui **{i["colors"]}** cores disponiveis;')
+            st.write(f'Possui **{i["colors"]}** cores disponíveis;')
             price = i['price']
             price = '{:,.2f}'.format(price).replace(',','*').replace('.', ',').replace('*', '.')
-            st.write(f'Preco: **R$ {price}**.')
+            st.write(f'Preço: **R$ {price}**.')
             url_img = i['url_img']
             url_pdf = i['pdf']
     
@@ -43,4 +43,4 @@ with c2:
     )
 
 st.write('---')
-st.markdown(f''''<center>{'{:-^100}'.format('Saiba os beneficios da spirulina clicando [AQUI](https://www.scielo.br/j/rbme/a/Z8PKY9Vrmf98Lhj8PhmMdcS/?lang=pt)')}</center>''', unsafe_allow_html = True)
+st.markdown(f''''<center>{'{:-^100}'.format('Saiba os benefícios da spirulina clicando [AQUI](https://www.scielo.br/j/rbme/a/Z8PKY9Vrmf98Lhj8PhmMdcS/?lang=pt)')}</center>''', unsafe_allow_html = True)
