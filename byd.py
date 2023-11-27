@@ -7,7 +7,7 @@ import base64
 def embed(link: str, h: str) -> str:
     return f'''
     <iframe 
-        width="100%" height="{h}" src="https://www.youtube-nocookie.com/embed/{link}}" 
+        width="100%" height="{h}" src="https://www.youtube-nocookie.com/embed/{link}" 
         frameborder="0" allow="autoplay; 
         clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen>
     </iframe>
