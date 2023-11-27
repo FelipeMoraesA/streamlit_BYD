@@ -23,16 +23,14 @@ def embed(link: str, h: str) -> str:
 def displayPDF(file):
     # Opening file from file path. this is used to open the file from a website rather than local
     with urllib.request.urlopen(file) as f:
-        base64_pdf = base64.b64encode(f.read()) # .decode('utf-8')
+        base64_pdf = base64.b64encode(f.read()) # 
 
     # Embedding PDF in HTML
     return f'''
-    <object type="application/pdf">
-        <iframe 
-            src="data:application/pdf;base64,{base64_pdf}"
-            width="100%" height="600">
-        </iframe>
-    </object>
+    <iframe 
+        src="data:application/pdf;base64,{base64_pdf.decode('ascii')}"
+        width="100%" height="600", type="application/pdf">
+    </iframe>
     '''
 
 css = '''
