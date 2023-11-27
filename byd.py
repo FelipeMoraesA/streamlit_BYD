@@ -30,7 +30,7 @@ def displayPDF(file):
     <iframe 
         src="data:application/pdf;base64,{base64_pdf}"
         width="100%" height="600" type="application/pdf">
-        </iframe>
+    </iframe>
     '''
 
 css = '''
