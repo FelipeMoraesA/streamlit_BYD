@@ -79,7 +79,7 @@ with c2:
         st.image(
             url_img, 
             caption = 'Imagem meramente ilustrativa',
-            width = 1200
+            width = 1000
         )
     with tab2:
         st.markdown(
