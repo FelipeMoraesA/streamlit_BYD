@@ -1,4 +1,3 @@
-
 import streamlit as st
 import json
 import urllib
@@ -67,11 +66,7 @@ with c1:
             url_img = i['url_img']
             url_pdf = i['pdf']
             url_video = i['video']
-    
-    # st.write(f'Veja a ficha completa em [pdf]({url_pdf}).')
-
-    #st.link_button('Veja a ficha completa', url_pdf)
-    
+           
 with c2:
     tab1, tab2, tab3 = st.tabs(['Imagem', 'Vídeo', 'Ficha Técnica'])
 
@@ -79,17 +74,15 @@ with c2:
         st.image(
             url_img, use_column_width = 'always',
             caption = 'Imagem meramente ilustrativa',
-            width = 900
+            width = 800
         )
     with tab2:
         st.markdown(
             embed(url_video, "600"), unsafe_allow_html = True
         )
 
-    # with tab3:
-    #     st.markdown(
-    #         displayPDF(url_pdf), unsafe_allow_html = True
-    #     )
+    with tab3:
+         st.link_button('Acesse o PDF', url_pdf)
 
 st.write('---')
 st.markdown(f'''
