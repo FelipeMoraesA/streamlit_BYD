@@ -69,9 +69,12 @@ with c1:
 
     pv_min = float(price * 0.2)
     
-    pv = st.number_input('Entrada', 1, 10000, 50)
+    pv = st.number_input('Valor da Entrada', 1, 600000, 10000)
     n = st.slider('Nº de Parcelas', 1, 36, 12, 1)
     i = st.slider('Taxa de Juros', 0.1, 50.0, 1.0, 0.1)
+
+    pmt = pv*(((1+i)**n*i)/(((1+i)**n*)-1))
+    st.write(pmt)
            
 with c2:
     tab1, tab2, tab3 = st.tabs(['Imagem', 'Vídeo', 'Ficha Técnica'])
