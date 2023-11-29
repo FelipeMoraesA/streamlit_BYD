@@ -73,7 +73,7 @@ with c1:
     n = st.slider('Nº de Parcelas', 1, 36, 12, 1)
     i = st.slider('Taxa de Juros', 0.1, 50.0, 1.0, 0.1)
 
-    pmt = pv*(((1+i)**n*i)/(((1+i)**n*)-1))
+    pmt = pv*(((1+i)**n*i)/(((1+i)**n)-1))
     st.write(pmt)
            
 with c2:
