@@ -74,7 +74,9 @@ with c1:
     i = st.slider('Taxa de Juros', 0.1, 50.0, 1.0, 0.1)
 
     pmt = pv*(((1+i)**n*i)/(((1+i)**n)-1))
+    final = pmt * n
     st.write(pmt)
+    st.write(final)
            
 with c2:
     tab1, tab2, tab3 = st.tabs(['Imagem', 'Vídeo', 'Ficha Técnica'])
