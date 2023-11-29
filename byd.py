@@ -66,6 +66,10 @@ with c1:
             url_img = i['url_img']
             url_pdf = i['pdf']
             url_video = i['video']
+
+    st.write(f'O valor mínimo para a entrada é {price*0,2}')
+    pv = st.str.number_input()
+    n = st.slider('Nº de Parcelas', 1, 36, 12, 1)
            
 with c2:
     tab1, tab2, tab3 = st.tabs(['Imagem', 'Vídeo', 'Ficha Técnica'])
