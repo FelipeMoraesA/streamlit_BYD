@@ -68,8 +68,9 @@ with c1:
             url_video = i['video']
 
     pv_min = price * 0.2
-    st.write(f'O valor mínimo para a entrada é R$ {pv_min} (20%)')
-    pv = st.number_input('Entrada', pv_min, price, pv_min, 1)
+    
+    st.write(f'O valor mínimo para a entrada é R$ {pv_min:.2f} (20%)')
+    pv = st.number_input('Entrada', pv_min, price, pv_min)
     n = st.slider('Nº de Parcelas', 1, 36, 12, 1)
            
 with c2:
