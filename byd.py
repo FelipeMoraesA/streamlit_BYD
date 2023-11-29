@@ -61,8 +61,8 @@ with c1:
             st.write(f'''Autonomia de **{str(i['autonomy_km'])}km**;''')
             st.write(f'Possui **{i["colors"]}** cores disponíveis;')
             price = i['price']
-            price = '{:,.2f}'.format(price).replace(',','*').replace('.', ',').replace('*', '.')
-            st.write(f'Preço: **R$ {price}**.')
+            price_f = '{:,.2f}'.format(price).replace(',','*').replace('.', ',').replace('*', '.')
+            st.write(f'Preço: **R$ {price_f}**.')
             url_img = i['url_img']
             url_pdf = i['pdf']
             url_video = i['video']
