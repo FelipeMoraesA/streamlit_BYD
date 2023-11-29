@@ -67,7 +67,7 @@ with c1:
             url_pdf = i['pdf']
             url_video = i['video']
 
-    pv_min = float(price * 0.2)
+    pv_min = price * 0.2
     
     pv = st.number_input('Valor da Entrada', min_value = pv_min, max_value =  price, value = pv_min)
     n = st.slider('Nº de Parcelas', 1, 36, 12, 1)
