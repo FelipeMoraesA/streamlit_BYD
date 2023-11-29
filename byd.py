@@ -69,7 +69,7 @@ with c1:
 
     pv_min = float(price * 0.2)
     
-    pv = st.number_input('Entrada (Mín. 20%)', pv_min, 200000.0, 1000.0, 1.0)
+    pv = st.number_input('Entrada (Mín. 20%)', min_value = pv_min, max_value = 200000.0, value = 1000.0, step = 1.0)
     n = st.slider('Nº de Parcelas', 1, 36, 12, 1)
     i = st.slider('Taxa de Juros', 0.1, 50.0, 1.0, 0.1)
            
