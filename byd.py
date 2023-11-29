@@ -67,7 +67,7 @@ with c1:
             url_pdf = i['pdf']
             url_video = i['video']
 
-    st.write(f'O valor mínimo para a entrada é {price * 0.2}')
+    st.write(f'O valor mínimo para a entrada é R$ {price * 0.2:,.2f}')
     pv = st.number_input('Entrada', 1, 36, 12, 1)
     n = st.slider('Nº de Parcelas', 1, 36, 12, 1)
            
