@@ -68,7 +68,7 @@ with c1:
             url_video = i['video']
 
     st.write(f'O valor mínimo para a entrada é {price*0,2}')
-    pv = st.str.number_input()
+    pv = st.str.number_input('Entrada', (price*0,2), price, (price*0,2), 1)
     n = st.slider('Nº de Parcelas', 1, 36, 12, 1)
            
 with c2:
