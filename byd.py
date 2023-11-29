@@ -70,7 +70,7 @@ with c1:
     pv_min = price * 0.2
     
     st.write(f'O valor mínimo para a entrada é R$ {pv_min:.2f} (20%)')
-    pv = st.number_input('Entrada', pv_min, 5000, 250)
+    pv = st.number_input('Entrada', 1, 5000, 250)
     #n = st.slider('Nº de Parcelas', 1, 36, 12, 1)
            
 with c2:
