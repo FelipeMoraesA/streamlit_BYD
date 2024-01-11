@@ -56,7 +56,7 @@ with c1:
 
     for i in dados:
         if i['car'] == model.lower():
-            st.write(f'Modelo da linha "**{i["line"]}**", sua propulsão e **{i["prop"]}**;')
+            st.write(f'Modelo da linha "**{i["line"]}**", sua propulsão é **{i["prop"]}**;')
             st.write(f'''Faz de 0 a 100 km/h em **{i['acceleration_0_100']}** segundos;''')
             st.write(f'''Autonomia de **{str(i['autonomy_km'])}km**;''')
             st.write(f'Possui **{i["colors"]}** cores disponíveis;')
