@@ -67,20 +67,9 @@ with c1:
             url_pdf = i['pdf']
             url_video = i['video']
 
-    pv_min = price * 0.2
-    
-    pv = st.number_input('Valor da Entrada', min_value = float(pv_min), max_value =  float(price), value = float(pv_min), 
-        step = float(10000))
-    n = st.slider('Nº de Parcelas', 1, 36, 12, 1)
-    i = st.slider('Taxa de Juros', 0.1, 50.0, 1.0, 0.1)
-
-    pmt = pv*(((1+i)**n*i)/(((1+i)**n)-1))
-    final = pmt * n
-    st.write(pmt)
-    st.write(final)
-           
+              
 with c2:
-    tab1, tab2, tab3 = st.tabs(['Imagem', 'Vídeo', 'Ficha Técnica'])
+    tab1, tab2, tab3, tab4 = st.tabs(['Imagem', 'Vídeo', 'Ficha Técnica', 'Quanto vai sair essa Brincadeira?'])
 
     with tab1:
         st.image(
@@ -94,7 +83,20 @@ with c2:
         )
 
     with tab3:
-         st.link_button('Acesse o PDF', url_pdf)
+        st.link_button('Acesse o PDF', url_pdf)
+
+    with tab4:
+        pv_min = price * 0.2
+    
+        pv = st.number_input('Valor da Entrada', min_value = float(pv_min), max_value =  float(price), value = float(pv_min), 
+        step = float(10000))
+        n = st.slider('Nº de Parcelas', 1, 36, 12, 1)
+        i = st.slider('Taxa de Juros', 0.1, 50.0, 1.0, 0.1)
+
+        pmt = pv*(((1+i)**n*i)/(((1+i)**n)-1))
+        final = pmt * n
+        st.write(pmt)
+        st.write(final)
 
 st.write('---')
 st.markdown(f'''
