@@ -39,7 +39,7 @@ section.main > div:has(~ footer ) {
 </style>
 '''
 st.markdown(css, unsafe_allow_html=True)
-st.title('Build Yours Dreams')
+st.title('Build Your Dreams')
 st.title('Do you love BYD?')
 st.write('Conheca as características de cada veículo')
 
